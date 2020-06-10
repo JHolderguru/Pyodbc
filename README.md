@@ -1,6 +1,22 @@
 # connecting Python with DB
 
-This class will allow our python to easily concect with our DB.
+WE are looking into
 
-To do so, we will use a package called (external to python standard library)PYDBC.
 
+
+
+##CRUD
+###CREATE
+
+
+###READ
+
+### READ one
+
+### READ all
+
+### Update
+
+### Destroy
+
+### Delete
