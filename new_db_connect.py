@@ -37,7 +37,7 @@ print(query_result3.fetchall())
 
 # Q4 - Select all of the entries where the Company name has a z or a Z in the table of Customers
 # Query:
-query_result4 = cursor.execute("SELECT * Customers WHERE CompanyName LIKE '%z%' OR CompanyName LIKE '%Z%' ")
+# query_result4 = cursor.execute("SELECT * Customers WHERE CompanyName LIKE '%z%' OR CompanyName LIKE '%Z%' ")
 
 # Response:
 # print(query_result4.fetchall())

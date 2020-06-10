@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec350d5f-8fa3-44af-990e-5c549f0e86e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db_clients_OOP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db_products_OOP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_CRUDproducts_OOP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_customers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_clients_OOP.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_connection_OOP.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_connection_OOP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_products_OOP.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_products_OOP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_db_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_db_connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_file.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +42,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Python.db_connection_OOP">
-    <configuration name="db_connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.run_file">
+    <configuration name="db_CRUDproducts_OOP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Pyodbc" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -53,7 +55,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_connect.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Jon.Holder\code\JHolderguru\Pyodbc\db_CRUDproducts_OOP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -83,6 +85,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="db_customers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Pyodbc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_customers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="db_products_OOP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Pyodbc" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,7 +127,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="new_db_connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="run_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Pyodbc" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,7 +139,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_db_connect.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_file.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,10 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.db_connection_OOP" />
-        <item itemvalue="Python.db_connect" />
+        <item itemvalue="Python.run_file" />
+        <item itemvalue="Python.db_customers" />
         <item itemvalue="Python.db_products_OOP" />
-        <item itemvalue="Python.new_db_connect" />
+        <item itemvalue="Python.db_CRUDproducts_OOP" />
+        <item itemvalue="Python.db_connection_OOP" />
       </list>
     </recent_temporary>
   </component>
@@ -148,22 +172,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="283" key="GridCell.Tab.0.bottom" timestamp="1591795808958">
+    <state width="1899" height="283" key="GridCell.Tab.0.bottom" timestamp="1591803762427">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591795808958" />
-    <state width="1899" height="283" key="GridCell.Tab.0.center" timestamp="1591795808958">
+    <state width="1899" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591803762427" />
+    <state width="1899" height="283" key="GridCell.Tab.0.center" timestamp="1591803762427">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591795808958" />
-    <state width="1899" height="283" key="GridCell.Tab.0.left" timestamp="1591795808958">
+    <state width="1899" height="283" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591803762427" />
+    <state width="1899" height="283" key="GridCell.Tab.0.left" timestamp="1591803762427">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591795808958" />
-    <state width="1899" height="283" key="GridCell.Tab.0.right" timestamp="1591795808958">
+    <state width="1899" height="283" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591803762427" />
+    <state width="1899" height="283" key="GridCell.Tab.0.right" timestamp="1591803762427">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="283" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591795808958" />
+    <state width="1899" height="283" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591803762427" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1591795524346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

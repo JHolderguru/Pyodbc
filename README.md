@@ -9,6 +9,7 @@ We are looking into the PYODBC package.
 
 ##CRUD
 ###CREATE
+still updating this for now 
 
 
 ###READ
@@ -22,3 +23,22 @@ We are looking into the PYODBC package.
 ### Destroy
 
 ### Delete
+
+### Example documentation
+This repo's is for the abstraction of the NW db with PYODBC.
+
+Please read bellow for the available method for each table
+
+Product table
+you can CRUD the product table. Avialble methods:
+
+Initialisation
+    products_table_instance = DBProduct_table()
+get_by_id(self, id) --> one object
+use this method to get out a product by ID
+
+example
+
+    '''python 
+    instance.get_by_id(15) 
+    #-> row with product id = 15'''
