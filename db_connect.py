@@ -27,12 +27,25 @@ data_point_card = query_result.fetchone()
 
 all_results_list = query_result.fetchall()
 
+
 #this one entry of data is a pyodbc.Row object
 print(type(data_point_card))
 #
 #behaves like a iterable list -organised with index
 print(data_point_card[1])
 #
-#
-for data_point_card in all_results_list:
-    print(data_point_card.ProductName,'costs', data_point_card.UnitPrice)
+
+query_result = cursor.execute('SELECT * FROM Products')
+
+while True:
+#         use our uery results or cursoe with query reulst and
+# fetch one at a time and
+#   do whatever we want/need with that data point - print it ? get out the price? add a discount?
+#   Stop the iteration when there is no more data
+#           ----> or when the data point is None (python) ( null is in SQL)
+    row = query_result.fetchone()
+    if row == None:
+        break
+    print(row.ProductName, 'NOW ONLY', float(row.UnitPrice) * 0.50)
+
+#The way you design or the way yo fetch data will have an impact performance and price at the end of the month
