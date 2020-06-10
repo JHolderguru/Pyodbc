@@ -9,10 +9,11 @@ password = 'Passw0rd2018'
 db_string ='DRIVER={SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password
 # print(db_string)
 
-
+#2Est a connect
+py_connect2 = pyodbc.connect(db_string)
 #3)makescursor(this keeps state)
 #making a cursor
-py_connect2 = pyodbc.connect(db_string)
+
 cursor = py_connect2.cursor()
 print(cursor)
 

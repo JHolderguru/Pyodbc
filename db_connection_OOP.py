@@ -1,29 +1,40 @@
 import pyodbc
 
+from db_connect import *
+
+
 class MSDBconnection():
 
-    def __init__(self, database ='Northwind', server='databases2.spartaglobal.academy', password='Passw0rd2018'):
+    def __init__(self, database='Northwind', server='databases2.spartaglobal.academy', username='SA',
+                 password='Passw0rd2018'):
         # 1) DB server connection variables
         self.server = server
         self.database = database
-        self.username = 'SA'
+        self.username = username
         self.password = password
+        # making connection and cursors
         self.conn = self._establish_connection()
+        self.cursor = self.conn.cursor()
 
-    #2) Establishing the connection
+        # 2) establishing the connection
+
     def _establish_connection(self):
-        connection = pyodbc.connect()
-        'DRIVER={SQL Server};SERVER=' + self server + ';DATABASE=' + self database + ';UID=' + self username + ';PWD=' +self password
-        # print(db_string)
+        py_connect2 = 'DRIVER={SQL Server};SERVER=' + self.server + ';DATABASE=' + self.database + ';UID=' + self.username + ';PWD=' + self.password
+        return pyodbc.connect(py_connect2)
 
     def sql_query(self, sql_string):
-        #call method to filter out DROP table and DELETE * and only allow certain SQL queries
+        # call method to filter out DROP table and DELETE * and only allow certain SQL queries
         return self.cursor.execute(sql_string)
 
-# nwind = MSDBconnection()
+
+nwind = MSDBconnection()
 # print(nwind.sql_query('SELF * FROM PRODUCTS'))
 #
-# results =nwind.sql_query('SELECT * FROM PRODUCTS')
-#
+# results = nwind.sql_query('SELECT * FROM PRODUCTS')
+# #
 # while True:
-#    if row = None
+#      row = results.fetchone()
+# #
+#      if row == None:
+#          break
+#      print(row.ProductName)
