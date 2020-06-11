@@ -5,47 +5,62 @@ from db_customers import CustomerTable
 from flask_sqlalchemy import SQLAlchemy
 
 
-#1) Fetching Data from Customer Table
-
-Customer = CustomerTable()
-for data in Customer.get_the_id('ANTON'):
-    print(data)
-
-
-#2) Fetching Data from Products Table
-
-products = ProductTable()
-for data in products.get_by_id(3):
-    print(data)
-
-#or  and pass the id
-
-print(products.get_by_id(2))
-
-
-
+# #1) Fetching Data from Customer Table
 #
-# new_entry = ProductTable()
+# Customer = CustomerTable()
+# for data in Customer.get_the_id('ANTON'):
+#     print(data)
+#
+# #1a) Fetching all the data from the customer
+# # for data in Customer.get_all():
+# #     print(data)
+#
+# #1b) Fetching Particular data from the customer(purse in the name)
+# for data in Customer.get_all('Elizabeth'):
+#     print(data)
+#
+#
+# #2) Fetching Data from Products Table
+#
+# products = ProductTable()
+# for data in products.get_by_id(3):
+#     print(data)
+#
+# #or  and pass the id
+#
+# print(products.get_by_id(2))
+#
+# #2a)Fetching all the Data from the ProductTable()
+# # for data in (products.get_all()):
+# #     print(data)
+#
+
+
+
+#3) Now we want to input data into the table
+new_entry = ProductTable()
 # cus_entry = CustomerTable()
-#
-# while True:
-#     user_input = input("Press any key to continue or press 'x' to exit: ")
-#     while user_input != 'x':
-#         user_input_1 = input("Enter product name or press 'x' to abort")
-#         user_input_2 = int(input())
-#         user_input_3 = int(input())
-#         user_input_4 = input()
-#         user_input_5 = int(input())
-#         user_input_6 = int(input())
-#         user_input_7 = int(input())
-#         user_input_8 = int(input())
-#         print(new_entry.create_entry(user_input_1, user_input_2, user_input_3, user_input_4, user_input_5, user_input_6,
-#                                      user_input_7, user_input_8))
-#         while user_input_1 == 'x':
-#             break
-#     if user_input == 'x':
-#         break
-#
+
+while True:
+    user_input = input("Press any key to continue or press 'x' to exit: ")
+    while user_input != 'x':
+        ProductID = int(input("Enter product ID number or press 'x' to abort"))
+        ProductName = (input('insert the name please'))
+        SupplierID = int(input())
+        CategoryID = int(input())
+        QuantityPerUnit = int(input())
+        UnitPrice = float(input())
+        UnitsInStock = int(input())
+        UnitsOnOrder = int(input())
+        ReOrderLevel = int(input())
+        Discontinued = int(input())
+        print(new_entry.create_entry(ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice,
+                                     UnitsInStock, UnitsOnOrder, ReOrderLevel,Discontinued))
+        while user_input == 'x':
+            break
+    if user_input == 'x':
+        break
+
 
 
 

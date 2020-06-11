@@ -7,7 +7,7 @@ class CustomerTable(MSDBconnection):
                      Country, Phone, Fax):
         return self.sql_query(
             f"""INSERT INTO Customers (CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax)
-    VALUES (f{CustomerID}, '{CompanyName}', {ContactName}, {ContactTitle},'{Address}', {City}, {Region}, {PostalCode}, {Country}, {Phone}, {Fax})""")
+    VALUES (f{CustomerID}, '{CompanyName}', {ContactName}, {ContactTitle},'{Address}', {City}, {Region}, {PostalCode}, {Country}, {Phone}, {Fax})""").commit
 
     def get_the_id(self, id):
         query_string ="SELECT * FROM Customers WHERE CustomerID = " +"'" + str(id) + "'"
@@ -19,7 +19,7 @@ class CustomerTable(MSDBconnection):
         if customer_name is None:
             query_result = self.sql_query('SELECT * FROM Customers')
         else:
-            query_result = self.sql_query(f"SELECT * FROM Customers WHERE ContactName LIKE '%{customer_name}%'")
+            query_result = self.sql_query(f"SELECT * FROM Customers WHERE ContactName LIKE '%{customer_name}%'").commit
         while True:
             row = query_result.fetchone()
             if row is None:
@@ -27,17 +27,19 @@ class CustomerTable(MSDBconnection):
             result_list.append(row)
         return result_list
 
+    def update_db(self, column_1, val_1, column_2, condition):
+        return self.sql_query(f"UPDATE Products SET {column_1} = '{val_1}' WHERE {column_2} = '{condition}'").commit
     #     result_list = []
     #
     # if ContactName == None:
     #     result = self.sql_query('SELECT * FROM Customers')
 
 
-Customer = CustomerTable()
+# Customer = CustomerTable()
 
 # print(Customer.get_the_id('ALFKI'))
-for data in Customer.get_the_id('ANTON'):
-    print(data)
+# for data in Customer.get_the_id('ANTON'):
+#     print(data)
 
 #print(Customer.get_all())
 
