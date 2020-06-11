@@ -28,10 +28,11 @@ class MSDBconnection():
 
 
 nwind = MSDBconnection()
-# print(nwind.sql_query('SELF * FROM PRODUCTS'))
-#
-# results = nwind.sql_query('SELECT * FROM PRODUCTS')
+# print(nwind.sql_query('SELECT * FROM PRODUCTS'))
 # #
+# results = nwind.sql_query('SELECT * FROM PRODUCTS')
+# print(results)
+# # #
 # while True:
 #      row = results.fetchone()
 # #
