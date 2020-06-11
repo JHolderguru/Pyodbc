@@ -33,6 +33,8 @@ class ProductTable(MSDBconnection):
 
     def update_db(self, column_1, val_1, column_2, condition):
         return self.sql_query(f"UPDATE Products SET {column_1} = '{val_1}' WHERE {column_2} = '{condition}'").commit
+
+
 # products = ProductTable()
 
 
