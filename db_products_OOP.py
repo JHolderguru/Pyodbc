@@ -32,10 +32,10 @@ class DBProduct_table(MSDBconnection):
 
 # to be sent to run file
 #
-product_table = DBProduct_table()
-# #
-print(product_table.get_by_id(2))
-# #
+# product_table = DBProduct_table()
+# # #
+# print(product_table.get_by_id(2))
+# # #
 # print(product_table.get_all())
 # print(product_table.get_all('Chef'))
 

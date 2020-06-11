@@ -6,12 +6,12 @@ from db_connection_OOP import MSDBconnection
 
 class ProductTable(MSDBconnection):
 
-    def create_entry(self, ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit,
+    def create_entry(self, ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit,UnitPrice,
                      UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued):
-        return self.sql_query(f"""INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit,
+        return self.sql_query(f"""INSERT INTO Products (ProductName, SupplierID, CategoryID, QuantityPerUnit,UnitPrice,
                                UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued)
-                               VALUES (f{ProductID}, '{ProductName}', {SupplierID}, {CategoryID}, '{QuantityPerUnit}', 
-                                {UnitsInStock}, {UnitsOnOrder}, {ReorderLevel}, {Discontinued})""")
+                               VALUES (f{ProductName},'{ProductName}', {SupplierID}, {CategoryID}, '{QuantityPerUnit}',{UnitPrice}, 
+                                {UnitsInStock}, {UnitsOnOrder}, {ReorderLevel}, {Discontinued})""").commit
 
     def get_by_id(self, id):
         return self.sql_query('SELECT * FROM Products WHERE ProductID=' + str(id)).fetchone()
@@ -22,7 +22,7 @@ class ProductTable(MSDBconnection):
         if product_name == None:
             q_result = self.sql_query('SELECT * FROM Products')
         else:
-            q_result = self.sql_query(f"SELECT * FROM Products WHERE ProductName LIKE '%{product_name}%' ")
+            q_result = self.sql_query(f"SELECT * FROM Products WHERE ProductName LIKE %'{product_name}'%")
 
         while True:
             row = q_result.fetchone()
@@ -31,12 +31,16 @@ class ProductTable(MSDBconnection):
             result_list.append(row)
         return result_list
 
-products = ProductTable()
+    def update_db(self, column_1, val_1, column_2, condition):
+        return self.sql_query(f"UPDATE Products SET {column_1} = '{val_1}' WHERE {column_2} = '{condition}'").commit
 
 
-print(products.get_all())
+# products = ProductTable()
 
-print(products.get_by_id(2))
+
+# print(products.get_all())
+#
+# print(products.get_by_id(2))
 # # #
 # print(product_table.get_all())
 # #
